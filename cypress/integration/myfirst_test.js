@@ -24,22 +24,21 @@ describe('Test',()=>{
     });
  it.only('QformsLogin', () =>{
         call.login();
-      //   call.navigate(url);
-      //    call.emailAddress();
-      //    call.password();
-      //    call.onSubmit();
          cy.screenshot();
-         //cy.url().should('include', exlink)
-         // call.errormessage()
-         // cy.log("log in failed")
-       
-
- })
+         
+       })
+it.only('InvaLidCredentials',()=>{
+   call.navigate(url);
+   call.emailAddress();
+   call.password();
+   call.onSubmit();
+   cy.url().should('include', exlink)
+   call.errormessage()
+   cy.log("log in failed")
+   
+})
     it('QformsLogindashboard', () =>{
-      call.navigate(url);
-      call.validEmailAddress();
-      call.password();
-      call.onSubmit();
+      call.login();
       cy.screenshot();
 
      cy.url().should('include', exlink)
@@ -85,7 +84,7 @@ describe('Test',()=>{
       cy.get(elements.formbuilder).should('be.visible')
       cy.get(elements.uploadpf).should('be.visible')
       })
-      it('viewuserrole',()=>
+      it.only('viewuserrole',()=>
       {
       call.navigate(url);
       call.validEmailAddress(); 
