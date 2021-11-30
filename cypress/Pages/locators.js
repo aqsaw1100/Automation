@@ -20,6 +20,11 @@ var elements={
     userlist:':nth-child(4) > .panel > .bold > .panel-footer > .pull-left',
     forgetpswd:'#mat-input-2',
     logout:'.dropdown-menu > :nth-child(2) > a',
-    sendemail:'.mat-button-wrapper'
+    successtoast:'.toast-title',
+    sendemail:'.mat-button-wrapper',
+    formmanage:'[fxlayoutalign="start"]',
+    backbutton:'.back-btn',
+    formbuilder:'[routerlink="/qforms/form-builder/0"] > div',
+    uploadpf:'[fxlayout="row"] > :nth-child(2) > div'
 }
 export {elements}

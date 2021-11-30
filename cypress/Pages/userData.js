@@ -15,5 +15,6 @@ var info={
      ref:'Lorem',
      femail:'aqsawh123@gmail.com'
 
+
 }
 export {info}

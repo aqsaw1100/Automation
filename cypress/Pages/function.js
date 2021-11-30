@@ -5,6 +5,7 @@ import { elements } from './locators';
 export class text{
 
     
+    
     navigate(url){
         cy.visit(url)
        // cy.get(':nth-child(7) > .mat-button-wrapper').click();
@@ -17,6 +18,14 @@ export class text{
         cy.get(fsel).type(firstName,{force:true})
 
     }
+    login(){
+
+        let url1='https://test.qforms.co'
+        this.navigate(url1)
+        this.validEmailAddress()
+        this.password()
+        this.onSubmit()
+       }
     enterLastName(){
         let lastName=info.lName;
         let lsel=elements.lNameSel;
