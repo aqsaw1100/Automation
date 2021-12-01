@@ -16,7 +16,6 @@ var locators={
     viewform:':nth-child(1) > .panel > .bold > .panel-footer > .pull-left',
     createform:':nth-child(2) > .panel > .color-dark > .panel-footer > .pull-left',
     viewusrrole:':nth-child(3) > .panel > .bold > .panel-footer > .pull-left',
-    billing:':nth-child(5) > .panel > .color-dark > .panel-footer > .pull-left',
     userlist:':nth-child(4) > .panel > .bold > .panel-footer > .pull-left',
     forgetpswd:'#mat-input-2',
     logout:'.dropdown-menu > :nth-child(2) > a',
@@ -25,9 +24,10 @@ var locators={
     formmanage:'[fxlayoutalign="start"]',
     backbutton:'.back-btn',
     formbuilder:'[routerlink="/qforms/form-builder/0"] > div',
-    
+    createnewuser:'#button_add_user',
     rolelist:'[fxflex="20"]',
     newrole:'#button_add_user',
+    userlistlabel:'[fxflex="40"]',
     uploadpf:'[fxlayout="row"] > :nth-child(2) > div'
 }
 export {locators}
