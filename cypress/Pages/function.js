@@ -53,7 +53,7 @@ export class text{
         cy.get(phNo).type(call+Math.floor(Math.random()*100))
 
     }
-    emailAddress(){
+    randomemailAddress(){
     let msg=info.mail;
     let msgMail=elements.email;
 

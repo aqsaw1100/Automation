@@ -30,7 +30,7 @@ describe('Test',()=>{
        })
 it('InvaLidCredentials',()=>{
    call.navigate(url);
-   call.emailAddress();
+   call.randomemailAddress();
    call.password();
    call.onSubmit();
    cy.url().should('include', exlink)
@@ -79,10 +79,7 @@ it('InvaLidCredentials',()=>{
      })
       it('form manager',()=>
       {
-      call.navigate(url);
-      call.validEmailAddress();
-      call.password();
-      call.onSubmit();
+      call.login
       cy.get(elements.viewform).click()
       cy.get(elements.formmanage).contains(' Form Manager ')
       cy.get(elements.backbutton).click()
@@ -90,20 +87,14 @@ it('InvaLidCredentials',()=>{
    })
       it('create form',()=>
       {
-      call.navigate(url);
-      call.validEmailAddress();
-      call.password();
-      call.onSubmit();
+      call.login
       cy.get(elements.createform).click()
       cy.get(elements.formbuilder).should('be.visible')
       cy.get(elements.uploadpf).should('be.visible')
       })
       it('viewuserrole',()=>
       {
-      call.navigate(url);
-      call.validEmailAddress(); 
-      call.password();
-      call.onSubmit();
+      call.login
       cy.get(elements.viewusrrole).click()
       cy.get('[fxflex="20"]').should('have.text'," Role List ")
       cy.get('#button_add_user').should('be.visible')

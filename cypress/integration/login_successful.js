@@ -21,7 +21,7 @@ let exdashboardlink='https://test.qforms.co/#/dashboard'
 
 describe('Test',()=>{
 
-       it('QformsLogin', () =>{
+       it.skip('QformsLogin', () =>{
        call.login();
        cy.screenshot();
        cy.url().should('include', link)
