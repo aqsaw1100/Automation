@@ -13,47 +13,44 @@ let exlink=links.expectedlink
 let exdboardlink=links.exdashboardlink
 
 
-describe('Test',()=>{
-   afterEach(function() {
-
-      if (this.currentTest.state === 'failed') {
-
+describe('Test',()=>
+{
+   afterEach(function(){
+        if (this.currentTest.state === 'failed')
+        {
         Cypress.runner.stop()
-
-      }
-
-    });
- it('QformsLogin', () =>{
+     }
+      });
+      it('QformsLogin', () =>
+      {
         call.login();
-         cy.screenshot();
-         
+        cy.screenshot();
        })
 it('InvaLidCredentials',()=>{
-   call.navigate(url);
-   call.emailAddress();
-   call.password();
-   call.onSubmit();
-   cy.url().should('include', exlink)
-   call.errormessage()
-   cy.log("log in failed")
+      call.navigate(url);
+      call.emailAddress();
+      call.password();
+      call.onSubmit();
+      cy.url().should('include', exlink)
+      call.errormessage()
+      cy.log("log in failed")
    
 })
     it('QformsLogindashboard', () =>{
       call.login();
       cy.screenshot();
-
-     cy.url().should('include', exlink)
-     cy.log("successfully logged in")
-     cy.url().should('eq',exdboardlink )
-     cy.get(locators.userdemo).should('have.text',userdata.checkuserdemo)
-     cy.get(locators.navigation).should('be.visible')
-     cy.get(locators.viewform).should('have.text',"View Forms List")
-     cy.get(locators.createform).should('have.text',"Create Forms ")
-     cy.get(locators.viewusrrole).should('have.text',"View User Role List ") 
-     cy.get(locators.userlist).should('have.text',"View User List")
-     cy.contains('Due Amount')
-     cy.get(locators.userdemo).should('have.text',userdata.checkuserdemo).click()
-     cy.get(locators.logout).click()
+      cy.url().should('include', exlink)
+      cy.log("successfully logged in")
+      cy.url().should('eq',exdboardlink )
+      cy.get(locators.userdemo).should('have.text',userdata.checkuserdemo)
+      cy.get(locators.navigation).should('be.visible')
+      cy.get(locators.viewform).should('have.text',"View Forms List")
+      cy.get(locators.createform).should('have.text',"Create Forms ")
+      cy.get(locators.viewusrrole).should('have.text',"View User Role List ") 
+      cy.get(locators.userlist).should('have.text',"View User List")
+      cy.contains('Due Amount')
+      cy.get(locators.userdemo).should('have.text',userdata.checkuserdemo).click()
+      cy.get(locators.logout).click()
  })
 
 
@@ -105,10 +102,21 @@ it('InvaLidCredentials',()=>{
       cy.get(locators.rolelist).should('have.text'," Role List ")
       cy.get(locators.newrole).should('be.visible')
       })
-      it.only('users',()=>
-         {
-            call.login()
-            cy.get().click()
+      it('users',()=>
+      {
+       call.login()
+       cy.get(locators.userlist).click()
+       cy.get(locators.createnewuser).should('be.visible')
+       cy.get(locators.userlistlabel).invoke('text').then((labeluser)=>{
+       expect(labeluser.trim()).to.equal("User List")
+            })
          })
-
+      it('billingninvoice',()=>
+      {
+       call.login()
+       cy.get(':nth-child(5) > .panel > .panel-heading').click()
+       cy.get('.mat-sort-header-button').invoke('text').then((textOfElement)=>{
+       expect(textOfElement.trim()).to.equal("CLIENT ID")
+          })
+      })
 })
