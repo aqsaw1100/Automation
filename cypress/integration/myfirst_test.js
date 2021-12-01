@@ -5,6 +5,7 @@ import { elements } from "../Pages/locators"
 import { data, text} from  "d:/cypressQformautomation/cypress/Pages/function"
 import { info } from "../Pages/userData"
 import { links } from "d:/cypressQformautomation/cypress/Pages/routes"
+import { result } from "lodash"
 
 const call =new text()
 let url=links.link1
@@ -22,12 +23,12 @@ describe('Test',()=>{
       }
 
     });
- it.only('QformsLogin', () =>{
+ it('QformsLogin', () =>{
         call.login();
          cy.screenshot();
          
        })
-it.only('InvaLidCredentials',()=>{
+it('InvaLidCredentials',()=>{
    call.navigate(url);
    call.emailAddress();
    call.password();
@@ -54,7 +55,20 @@ it.only('InvaLidCredentials',()=>{
      cy.get(elements.userdemo).should('have.text',info.checkuserdemo).click()
      cy.get(elements.logout).click()
  })
-     it('forgetPassword',()=>
+     it.only('invalidPassword',()=>{
+      call.navigate(url);
+      call.validEmailAddress();
+      let result1="result"
+      
+     let rpassword=call.generateString(8);
+      
+      cy.get(elements.password).type(rpassword)
+      call.onSubmit();
+      cy.url().should('include', exlink)
+      call.errormessage()
+      cy.log("log in failed")
+     })   
+ it('forgetPassword',()=>
      {
         call.navigate(url);
         cy.get('form.ng-untouched > div.custom-vertical-spacer > a').click()
@@ -84,7 +98,7 @@ it.only('InvaLidCredentials',()=>{
       cy.get(elements.formbuilder).should('be.visible')
       cy.get(elements.uploadpf).should('be.visible')
       })
-      it.only('viewuserrole',()=>
+      it('viewuserrole',()=>
       {
       call.navigate(url);
       call.validEmailAddress(); 

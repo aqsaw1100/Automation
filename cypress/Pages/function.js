@@ -38,12 +38,7 @@ export class text{
         cy.get(location).type(add)
 
     }
-    appUnit(){
-        let unt=info.appunt;
-        let location=elements.app;
-        cy.get(location).type(unt)
-
-    }
+   
    zipCode(){
     let code=info.pincode;
     let zcode=elements.addCode;
@@ -64,7 +59,9 @@ export class text{
 
         cy.get(msgMail).type(msg+Math.floor(Math.random()*100)+'@mail.com')
     
-
+    }
+    invalidpassword(){
+        
     }
     validEmailAddress(){
         let email=info.validemail;
@@ -99,6 +96,10 @@ export class text{
         
     }
     generateString(length) {
+        //let pswd=elements.password;
+        //let invalid=result;
+        // let val=cy.get(elements.password)
+        // val.type(result)
         const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         
         let result = ' ';
@@ -108,5 +109,7 @@ export class text{
         }
     
         return result;
+        
+        
     }
 }
