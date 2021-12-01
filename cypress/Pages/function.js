@@ -1,5 +1,5 @@
-import {info} from './userData'
-import { elements } from './locators';
+import {userdata} from './userData'
+import { locators } from './locator';
 //import { should } from 'chai';
 
 export class text{
@@ -13,8 +13,8 @@ export class text{
     }
     
     enterFirstName(){
-        let firstName=info.fname;
-        let fsel=elements.fNameSel;
+        let firstName=userdata.fname;
+        let fsel=locators.fNameSel;
         cy.get(fsel).type(firstName,{force:true})
 
     }
@@ -27,35 +27,35 @@ export class text{
         this.onSubmit()
        }
     enterLastName(){
-        let lastName=info.lName;
-        let lsel=elements.lNameSel;
+        let lastName=userdata.lName;
+        let lsel=locators.lNameSel;
         cy.get(lsel).type(lastName+this.generateString(5),{force:true})
 
     }
     enterStreetAddress(){
-        let add=info.address;
-        let location=elements.address;
+        let add=userdata.address;
+        let location=locators.address;
         cy.get(location).type(add)
 
     }
    
    zipCode(){
-    let code=info.pincode;
-    let zcode=elements.addCode;
+    let code=userdata.pincode;
+    let zcode=locators.addCode;
 
         cy.get(zcode).type(code+'{enter}')
 
     }
    phoneNumber(){
-    let call=info.number;
-    let phNo=elements.num;
+    let call=userdata.number;
+    let phNo=locators.num;
 
         cy.get(phNo).type(call+Math.floor(Math.random()*100))
 
     }
-    randomemailAddress(){
-    let msg=info.mail;
-    let msgMail=elements.email;
+    emailAddress(){
+    let msg=userdata.mail;
+    let msgMail=locators.email;
 
         cy.get(msgMail).type(msg+Math.floor(Math.random()*100)+'@mail.com')
     
@@ -64,34 +64,34 @@ export class text{
         
     }
     validEmailAddress(){
-        let email=info.validemail;
-        let msgMail=elements.email;
+        let email=userdata.validemail;
+        let msgMail=locators.email;
         cy.get(msgMail).type(email)
     }
     forgetpassword(){
-        let forgetemail=info.femail;
-        let forgetpasswordlocator =elements.forgetpswd;
+        let forgetemail=userdata.femail;
+        let forgetpasswordlocator =locators.forgetpswd;
         cy.get(forgetpasswordlocator).type(forgetemail);
     }
     password(){
-        let pswd=elements.password;
-        let pswdvalue=info.password;
+        let pswd=locators.password;
+        let pswdvalue=userdata.password;
         cy.get(pswd).type(pswdvalue)
     }
    errormessage(){
-        let erormsg=elements.errormessage;
-        let erormsgvalue=info.errormessage;
+        let erormsg=locators.errormessage;
+        let erormsgvalue=userdata.errormessage;
         cy.get(erormsg).contains(erormsgvalue)
     }
     
     refferedBy(){
-    let details=info.ref;
-        let refText=elements.ref;
+    let details=userdata.ref;
+        let refText=locators.ref;
         cy.get(refText).type(details)
 
     }
     onSubmit(){
-    let LogIn=elements.login;
+    let LogIn=locators.login;
     cy.get(LogIn).click();
         
     }

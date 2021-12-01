@@ -1,4 +1,4 @@
-var info={
+var userdata={
 
     
      fname:'idrees',
@@ -17,4 +17,4 @@ var info={
 
 
 }
-export {info}
+export {userdata}

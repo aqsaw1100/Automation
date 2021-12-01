@@ -1,4 +1,4 @@
-var elements={
+var locators={
 
     fNameSel: '#mat-input-1',
     lNameSel:'#mat-input-2',
@@ -25,6 +25,9 @@ var elements={
     formmanage:'[fxlayoutalign="start"]',
     backbutton:'.back-btn',
     formbuilder:'[routerlink="/qforms/form-builder/0"] > div',
+    
+    rolelist:'[fxflex="20"]',
+    newrole:'#button_add_user',
     uploadpf:'[fxlayout="row"] > :nth-child(2) > div'
 }
-export {elements}
+export {locators}

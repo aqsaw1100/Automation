@@ -1,10 +1,10 @@
 ///<reference types="cypress" />
 
 
-import { elements } from "../Pages/locators"
+import { locators } from "../Pages/locator"
 import { data, text} from  "d:/cypressQformautomation/cypress/Pages/function"
 import { info } from "../Pages/userData"
-import { links } from "d:/cypressQformautomation/cypress/Pages/routes"
+import { links } from "../Pages/link"
 
 
 
