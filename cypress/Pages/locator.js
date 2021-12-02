@@ -9,6 +9,7 @@ var locators={
     email:'#mat-input-0',
     password:'#mat-input-1',
     login:':nth-child(4) > .full-width > .mat-button-wrapper',
+    forgetlink:'form.ng-untouched > div.custom-vertical-spacer > a',
     errormessage:'.toast-title',
     ref:'#mat-input-8',
     userdemo:'.dropdown-toggle',
@@ -28,6 +29,8 @@ var locators={
     rolelist:'[fxflex="20"]',
     newrole:'#button_add_user',
     userlistlabel:'[fxflex="40"]',
+    billing:':nth-child(5) > .panel > .panel-heading',
+    clientid:'.mat-sort-header-button',
     uploadpf:'[fxlayout="row"] > :nth-child(2) > div'
 }
 export {locators}

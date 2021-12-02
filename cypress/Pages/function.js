@@ -53,7 +53,7 @@ export class text{
         cy.get(phNo).type(call+Math.floor(Math.random()*100))
 
     }
-    emailAddress(){
+    remailAddress(){
     let msg=userdata.mail;
     let msgMail=locators.email;
 
@@ -96,10 +96,7 @@ export class text{
         
     }
     generateString(length) {
-        //let pswd=elements.password;
-        //let invalid=result;
-        // let val=cy.get(elements.password)
-        // val.type(result)
+       
         const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         
         let result = ' ';

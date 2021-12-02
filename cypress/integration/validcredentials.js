@@ -12,19 +12,14 @@ import { links } from "../Pages/link"
 const call =new text()
 
 let link='https://test.qforms.co'
+let exdboardlink=links.exdashboardlink
 
-let expectedlink='https://test.qforms.co/#/login'
-
-let exdashboardlink='https://test.qforms.co/#/dashboard'
-
-
-
-describe('Test',()=>{
-
-       it('QformsLogin', () =>{
-       call.login();
-       cy.screenshot();
-       cy.url().should('include', link)
+       it.only('QformsLogin', () =>{        
+       call.login();                               //logging q forms
+       //cy.url().should('include', link)         
+       cy.log("you have entered qforms log in page")
+       cy.url().should('eq',exdboardlink )         //asserting dashboard url once we logged in 
+       cy.screenshot()
 
        })
-    })
+    
