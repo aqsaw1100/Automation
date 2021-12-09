@@ -31,6 +31,20 @@ var locators={
     userlistlabel:'[fxflex="40"]',
     billing:':nth-child(5) > .panel > .panel-heading',
     clientid:'.mat-sort-header-button',
-    uploadpf:'[fxlayout="row"] > :nth-child(2) > div'
+    textcreateform:'h3',
+    text2createform:'h4',
+    uploadpf:'[fxlayout="row"] > :nth-child(2) > div',
+    dragyouroption:'.font-16',
+    plusicon:'.toggle-entry-add > .mat-button-wrapper > .material-icons',
+    control:'#mat-tab-label-0-0 > .mat-tab-label-content',
+    typography:'#headingTypography > .panel-title > a',
+    heading:'#header > .col-md-10',
+    paragraph:'#typoparagraph > .col-md-10',
+    canvas:'.page-container-warapper',
+    imagetext:'#imagelefttext > .col-md-10' ,
+    errorunreg:'.toast-title',
+    toastmsg:'.toast-message'
+   
+   
 }
 export {locators}

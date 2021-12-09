@@ -26,6 +26,7 @@ export class text{
         this.password()
         this.onSubmit()
        }
+      
     enterLastName(){
         let lastName=userdata.lName;
         let lsel=locators.lNameSel;
@@ -73,6 +74,11 @@ export class text{
         let forgetpasswordlocator =locators.forgetpswd;
         cy.get(forgetpasswordlocator).type(forgetemail);
     }
+    forgetpassword_Unreg(){
+        let forgetUnregisteredemail=userdata.unregisteredEmail;
+        let forgetpasswordlocator =locators.forgetpswd;
+        cy.get(forgetpasswordlocator).type(forgetUnregisteredemail);
+    }
     password(){
         let pswd=locators.password;
         let pswdvalue=userdata.password;
@@ -95,6 +101,12 @@ export class text{
     cy.get(LogIn).click();
         
     }
+    loggingOut(){
+        let userD=locators.userdemo //looking for userdemo and click on it
+        let loggOut=locators.logout
+        cy.get(userD).click()
+        cy.get(loggOut).click()
+       }
     generateString(length) {
        
         const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
