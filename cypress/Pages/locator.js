@@ -39,12 +39,75 @@ var locators={
     control:'#mat-tab-label-0-0 > .mat-tab-label-content',
     typography:'#headingTypography > .panel-title > a',
     heading:'#header > .col-md-10',
-    paragraph:'#typoparagraph > .col-md-10',
+    
     canvas:'.page-container-warapper',
     imagetext:'#imagelefttext > .col-md-10' ,
     errorunreg:'.toast-title',
-    toastmsg:'.toast-message'
-   
-   
+    toastmsg:'.toast-message',
+    //FORM_ELEMENTS
+    form_preview:'.mat-slide-toggle-content',
+   properties: '#mat-tab-label-0-1',
+   tabletform:'#mat-button-toggle-2-button > .mat-button-toggle-label-content',
+   mobileform:'#mat-button-toggle-3-button > .mat-button-toggle-label-content',
+
+   //header
+   fieldname:':nth-child(1) > .form-control',
+   label_header:':nth-child(2) > .form-control',
+    dropdown_left_rght_top:':nth-child(5) > .form-control',
+    dropdownright:':nth-child(5) > .form-control',
+    toggle_hide:'.toggle',
+    //[paragraph]
+    paragraph:'#typoparagraph > .col-md-10',
+    label_text:':nth-child(2) > .form-control',
+    dropdown_left_rght_top_para:':nth-child(4) > .form-control',
+    //2column
+  twocolumntext:'#twocolumntext > .col-xs-10',
+  image1locator:'.mb-10.column-group > :nth-child(2) > .form-control',
+  image1columnurl:'.mb-10.column-group > :nth-child(3) > .form-control',
+  aligncolumnlocator:'.mb-10.column-group > :nth-child(4) > .form-control',
+  image2locator:':nth-child(3) > :nth-child(2) > .form-control',
+  image2columnurl:':nth-child(3) > :nth-child(3) > .form-control',
+  alignment:':nth-child(3) > :nth-child(4) > .form-control',
+  img:'#img1',
+  img2:'#img2',
+  //imagetext
+imgtext:'#imagelefttext > .col-xs-10',
+imagelocation:':nth-child(2) > .form-control',
+imagelabel:':nth-child(2) > .form-control',
+imagealign:':nth-child(4) > .form-control',
+imgvisibleright:'.img-right',
+//listitems
+listitems:'#orderedlist > .col-xs-10',
+listitemtext:':nth-child(2) > .form-control',
+listtype:':nth-child(4) > .form-control',
+fontsize:':nth-child(5) > .form-control',
+//jumbotron
+jumboton:'#jumbotron > .col-xs-10',
+jumbtitle:':nth-child(2) > .form-control',
+jumbdescription:':nth-child(4) > .form-control',
+buttontext:':nth-child(5) > .form-control',
+buttonurl:':nth-child(6) > .form-control',
+clickbutton:':nth-child(2) > .btn',
+//features
+feature:'#features > .col-xs-10',
+heading:':nth-child(2) > .column-heading',
+columntitleleft:':nth-child(2) > :nth-child(2) > .form-control',
+
+descriptionleft:':nth-child(2) > :nth-child(3) > .form-control',
+buttonlefttext:':nth-child(2) > :nth-child(3) > .form-control',
+lefturl:':nth-child(2) > :nth-child(5) > .form-control',
+titlecenter:':nth-child(3) > :nth-child(2) > .form-control',
+descriptioncenter:':nth-child(3) > :nth-child(2) > .form-control',
+buttoncentertext:':nth-child(3) > :nth-child(4) > .form-control',
+centerurl:':nth-child(3) > :nth-child(4) > .form-control',
+right:':nth-child(4) > :nth-child(2) > .form-control',
+rightdescription:':nth-child(4) > :nth-child(3) > .form-control',
+buttonrighttext:':nth-child(4) > :nth-child(3) > .form-control',
+righturl:':nth-child(4) > :nth-child(5) > .form-control' ,
+canvasfeatures:'features.ng-star-inserted > :nth-child(1) > :nth-child(1)',
+//form control
+dropdown:':nth-child(3) > .form-control'
+  
+
 }
 export {locators}

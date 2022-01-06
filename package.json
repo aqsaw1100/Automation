@@ -12,6 +12,7 @@
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.1.0",
     "cypress": "^9.1.1",
-    "cypress-mochawesome-reporter": "^2.3.0"
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-xpath": "^1.6.2"
   }
 }
