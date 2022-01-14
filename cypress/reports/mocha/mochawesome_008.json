@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-11T15:29:10.183Z",
+    "end": "2022-01-11T15:30:07.778Z",
+    "duration": 57595,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4c6e0791-33d9-46f3-9461-6d0be5ed97ec",
+      "title": "",
+      "fullFile": "cypress/integration/forrmcontrol_checkbox.js",
+      "file": "cypress/integration/forrmcontrol_checkbox.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1f9a7d18-68e2-4e3e-83bf-d44e416b48ee",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "text",
+              "fullTitle": "Test text",
+              "timedOut": null,
+              "duration": 55087,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.formcontrol).click(); //locating formcontrol and clicking on it\ncy.get(_locator.locators.checkbox).click();\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.labeltextt).should('be.visible').clear().type('education'); //label\ncy.get(_locator.locators.chkbox0p1).clear().type('12th');\ncy.get(_locator.locators.chkbox0p2).clear().type('masters');\ncy.get(_locator.locators.chkbox0p3).clear().type('phd');\ncy.get(_locator.locators.chkextra).click(); //add extra options\ncy.get(_locator.locators.dislayother).click(); //display other options\n//cy.get(locators.randomize).click()//randomize choices\n//cy.get(locators.formcompletion).click()//form completion\ncy.get(_locator.locators.savenclose).click(); //save n close\ncy.wait(6000);\ncy.get(_locator.locators.topmost_form).click();\ncy.get('.mat-primary > .mat-button-wrapper').click();\ncy.wait(8000);\ncy.get(_locator.locators.topmost_form + '> a').should('have.attr', 'href').then(href => {\n  cy.visit(href);\n});\ncy.get('#mat-checkbox-5 > .mat-checkbox-layout > .mat-checkbox-inner-container').click(); //function to extract URL from the Topmost Form in Form Manager in order to open it in the same FRAME\ncy.wait(5000);\ncy.get('.col-md-12 > .btn').click();",
+              "err": {},
+              "uuid": "6054a418-9708-4611-a647-1ce54ebcaf73",
+              "parentUUID": "1f9a7d18-68e2-4e3e-83bf-d44e416b48ee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6054a418-9708-4611-a647-1ce54ebcaf73"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55087,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

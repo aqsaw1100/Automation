@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-11T15:28:24.848Z",
+    "end": "2022-01-11T15:28:58.063Z",
+    "duration": 33215,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "689c3e89-04a2-4b21-af83-d382fb8800c2",
+      "title": "",
+      "fullFile": "cypress/integration/FormControls_text12109.js",
+      "file": "cypress/integration/FormControls_text12109.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81d14334-5cea-4605-904d-40da50f77d88",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "text",
+              "fullTitle": "Test text",
+              "timedOut": null,
+              "duration": 30962,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.formcontrol).click(); //locating formcontrol and clicking on it\ncy.get(_locator.locators.textbox).click();\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.labeltextt).should('be.visible').clear().type('colour'); //label\ncy.get(_locator.locators.dropdown).select('Right');\ncy.get(_locator.locators.fieldsize).select('Large'); //fieldsize\ncy.get(_locator.locators.reqdfield).click(); // making reqd field\ncy.get(_locator.locators.reqdfield).click(); //reverting back ti not reqd field\ncy.get(_locator.locators.placeholder).should('be.visible').clear().type('yourchoicecolor');\ncy.get(_locator.locators.canvas).should('be.visible'); //visibilty of control",
+              "err": {},
+              "uuid": "10cd102a-6c73-4edb-bfab-2d53da4487c8",
+              "parentUUID": "81d14334-5cea-4605-904d-40da50f77d88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10cd102a-6c73-4edb-bfab-2d53da4487c8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30962,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

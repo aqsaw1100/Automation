@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-11T15:39:26.967Z",
+    "end": "2022-01-11T15:40:42.597Z",
+    "duration": 75630,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b2d55036-05dc-49c3-a922-a4ae1858962c",
+      "title": "",
+      "fullFile": "cypress/integration/Typography-features.js",
+      "file": "cypress/integration/Typography-features.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bfdb396c-da30-4c68-8d25-014394b8f722",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "features",
+              "fullTitle": "Test features",
+              "timedOut": null,
+              "duration": 73272,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.feature).drag(_locator.locators.canvas); //list items will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.wait(6000);\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('features');\ncy.get(_locator.locators.heading).should('be.visible'); //heading should be visible\ncy.get(_locator.locators.columntitleleft).click().clear().type('hi');\ncy.wait(6000);\ncy.get(_locator.locators.columntitleleft).type('hi');\ncy.get(_locator.locators.descriptionleft).type('hii');\ncy.get(_locator.locators.buttonlefttext).type('me');\ncy.get(_locator.locators.lefturl).type(_userData.userdata.url4test);\ncy.wait(4000);\ncy.get(_locator.locators.canvasfeatures).should('have.text', _userData.userdata.junkdata); //asserting canvas area whether chnages are reflected\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "029a3425-5b15-4912-be7e-e900f036cab5",
+              "parentUUID": "bfdb396c-da30-4c68-8d25-014394b8f722",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "029a3425-5b15-4912-be7e-e900f036cab5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 73272,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

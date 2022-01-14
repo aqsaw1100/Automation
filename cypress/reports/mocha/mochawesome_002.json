@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-11T15:24:58.849Z",
+    "end": "2022-01-11T15:25:34.734Z",
+    "duration": 35885,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ec57fe53-d041-46aa-9ba2-71bba46cac56",
+      "title": "",
+      "fullFile": "cypress/integration/DashboardLabelCheck_11958.js",
+      "file": "cypress/integration/DashboardLabelCheck_11958.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4d785a80-689c-4fa5-ac73-b9a99d8a7d69",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "billingninvoice",
+              "fullTitle": "Test billingninvoice",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.get(_locator.locators.billing).click();\ncy.get(_locator.locators.clientid).invoke('text').then(textOfElement => {\n  expect(textOfElement.trim()).to.equal(\"CLIENT ID\"); //checking label client id\n  cy.screenshot();\n  cy.contains('Invoice Number');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.mat-sort-header-button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.mat-sort-header-button`, but never found it.\n    at Context.eval (https://test.qforms.co/__cypress/tests?p=cypress\\integration\\DashboardLabelCheck_11958.js:574:8)",
+                "diff": null
+              },
+              "uuid": "979154b4-1785-4766-9818-8ce5bc062be4",
+              "parentUUID": "4d785a80-689c-4fa5-ac73-b9a99d8a7d69",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "979154b4-1785-4766-9818-8ce5bc062be4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

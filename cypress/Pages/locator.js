@@ -1,8 +1,6 @@
 var locators={
 
-    fNameSel: '#mat-input-1',
-    lNameSel:'#mat-input-2',
-    address:'#mat-input-3',
+   
     app:'#mat-input-4',
     addCode:'#mat-input-5',
     num:'#mat-input-6',
@@ -105,9 +103,36 @@ rightdescription:':nth-child(4) > :nth-child(3) > .form-control',
 buttonrighttext:':nth-child(4) > :nth-child(3) > .form-control',
 righturl:':nth-child(4) > :nth-child(5) > .form-control' ,
 canvasfeatures:'features.ng-star-inserted > :nth-child(1) > :nth-child(1)',
-//form control
-dropdown:':nth-child(3) > .form-control'
-  
+//form control-text
+dropdown:':nth-child(3) > .form-control',
+formcontrol:'#headingFormControls > .panel-title > .collapsed',
+textbox:'#textbox > .col-xs-10',
+labeltextt:':nth-child(2) > .form-control',
+fieldsize:':nth-child(5) > .form-control',
+reqdfield:':nth-child(6) > .toggle-switchy > .toggle',
+placeholder:':nth-child(8) > .form-control',
+canvas:'.mat-drawer-content > :nth-child(1)',
+//formcontrol-number
+numbercontrol:'#number > .col-xs-10',
+//formcontrol-textarea
+textarea:'#paragraph > .col-xs-10',
+//formcontrol-checkbox
+checkbox:'#checkboxes > .col-xs-10',
+chkbox0p1:':nth-child(2) > :nth-child(1) > .mb-5',
+chkbox0p2:':nth-child(3) > :nth-child(1) > .mb-5',
+chkbox0p3:':nth-child(4) > :nth-child(1) > .mb-5',
+chkextra:':nth-child(2) > .text-right',
+dislayother:':nth-child(10) > .toggle-switchy > .toggle',
 
+//randomize
+randomize:':nth-child(12) > .toggle-switchy > .toggle',
+
+//formcompletion
+formcompletion:':nth-child(13) > .toggle-switchy > .toggle',
+//savenclose
+savenclose:'.example-button-row > .mat-accent > .mat-button-wrapper',
+                                   //form manager
+                                   topmost_form:'tbody > :nth-child(1) > .cdk-column-label'
+ 
 }
 export {locators}

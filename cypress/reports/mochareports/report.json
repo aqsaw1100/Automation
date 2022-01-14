@@ -1,0 +1,1142 @@
+{
+  "stats": {
+    "suites": 21,
+    "tests": 21,
+    "passes": 19,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-01-11T15:23:45.126Z",
+    "end": "2022-01-11T15:41:56.098Z",
+    "duration": 661966,
+    "testsRegistered": 21,
+    "passPercent": 90.47619047619048,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "216affa8-cd03-4359-b8ca-32d7815782f2",
+      "title": "",
+      "fullFile": "cypress/integration/CreateForm.js",
+      "file": "cypress/integration/CreateForm.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d0ca4ad-d0f8-4381-9118-727d2fe62777",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create form",
+              "fullTitle": "Test create form",
+              "timedOut": null,
+              "duration": 25707,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.get(_locator.locators.createform).click(); //locating create form on page and clicking on it\ncy.get(_locator.locators.textcreateform).should('have.text', \"Create a Form\");\ncy.get(_locator.locators.text2createform).should('have.text', \"Create an amazing form to collect data easily.\"); //look for label                         \ncy.get(_locator.locators.formbuilder).should('be.visible').click(); //on select template look for form builder locator\ncy.get(_locator.locators.dragyouroption).should('be.visible'); //label drag your first element should be visible\ncy.get(_locator.locators.plusicon).click(); //click on plus icon\ncy.contains('Form Elements'); //check label Form element is there\ncy.get(_locator.locators.control).invoke('text').then(labelcontrol => {\n  //check whether label control  is there or not    \n  expect(labelcontrol.trim()).to.equal(\"Controls\");\n});\ncy.get(_locator.locators.typography).invoke('text').then(labeltypography => {\n  //check for label typography is there or not\n  expect(labeltypography.trim()).to.equal(\"Typography\");\n});",
+              "err": {},
+              "uuid": "2298b879-24d5-4a1d-a842-e6966731ddea",
+              "parentUUID": "2d0ca4ad-d0f8-4381-9118-727d2fe62777",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2298b879-24d5-4a1d-a842-e6966731ddea"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25707,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ec57fe53-d041-46aa-9ba2-71bba46cac56",
+      "title": "",
+      "fullFile": "cypress/integration/DashboardLabelCheck_11958.js",
+      "file": "cypress/integration/DashboardLabelCheck_11958.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4d785a80-689c-4fa5-ac73-b9a99d8a7d69",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "billingninvoice",
+              "fullTitle": "Test billingninvoice",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.get(_locator.locators.billing).click();\ncy.get(_locator.locators.clientid).invoke('text').then(textOfElement => {\n  expect(textOfElement.trim()).to.equal(\"CLIENT ID\"); //checking label client id\n  cy.screenshot();\n  cy.contains('Invoice Number');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.mat-sort-header-button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.mat-sort-header-button`, but never found it.\n    at Context.eval (https://test.qforms.co/__cypress/tests?p=cypress\\integration\\DashboardLabelCheck_11958.js:574:8)",
+                "diff": null
+              },
+              "uuid": "979154b4-1785-4766-9818-8ce5bc062be4",
+              "parentUUID": "4d785a80-689c-4fa5-ac73-b9a99d8a7d69",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "979154b4-1785-4766-9818-8ce5bc062be4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a6db311d-2d27-4751-ab1f-c361dfd71eae",
+      "title": "",
+      "fullFile": "cypress/integration/ForgetPassword_RegisteredEmail.js",
+      "file": "cypress/integration/ForgetPassword_RegisteredEmail.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "forgetPassword",
+          "fullTitle": "forgetPassword",
+          "timedOut": null,
+          "duration": 13448,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\ForgetPassword_RegisteredEmail.js\\\\forgetPassword.png\"\n      }\n    ]\n  ]\n}",
+          "code": "call.navigate(url);\ncy.get(_locator.locators.forgetlink).click(); //forgt link click\ncall.forgetpassword();\ncy.get(_locator.locators.sendemail).click(); //click on send email\ncy.get(_locator.locators.successtoast).should('have.text', \" Success \"); //once email is send check message pop success is on screen\ncy.screenshot();\ncy.contains('Please check your inbox'); //checking label",
+          "err": {},
+          "uuid": "b0215e48-3c33-4ccd-ad4b-f088fb4fb22d",
+          "parentUUID": "a6db311d-2d27-4751-ab1f-c361dfd71eae",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "b0215e48-3c33-4ccd-ad4b-f088fb4fb22d"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 13448,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "48ce21c5-946a-4fef-8cc4-371b64df99f4",
+      "title": "",
+      "fullFile": "cypress/integration/ForgetPassword_UnRegisteredEmail.js",
+      "file": "cypress/integration/ForgetPassword_UnRegisteredEmail.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "forgetPassword",
+          "fullTitle": "forgetPassword",
+          "timedOut": null,
+          "duration": 11125,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\ForgetPassword_UnRegisteredEmail.js\\\\forgetPassword.png\"\n      }\n    ]\n  ]\n}",
+          "code": "call.navigate(url);\ncy.get(_locator.locators.forgetlink).click(); //forgt link click\ncall.forgetpassword_Unreg();\ncy.get(_locator.locators.sendemail).click(); //click on send email\ncy.get(_locator.locators.errormessage).invoke('text').then(labeleror => {\n  //assert label \"error\" whether its there or not\n  expect(labeleror.trim()).to.equal(\"Error\");\n});\ncy.screenshot();",
+          "err": {},
+          "uuid": "91271cce-9737-4627-a5fd-bb74f234c00e",
+          "parentUUID": "48ce21c5-946a-4fef-8cc4-371b64df99f4",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "91271cce-9737-4627-a5fd-bb74f234c00e"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 11125,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "20d17701-f32f-4a03-ac14-aa9bbbe2c0fa",
+      "title": "",
+      "fullFile": "cypress/integration/formcontrol-number.js",
+      "file": "cypress/integration/formcontrol-number.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2eda5a62-ae93-4bca-8e5c-e42f3f1657e8",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "text",
+              "fullTitle": "Test text",
+              "timedOut": null,
+              "duration": 31653,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.formcontrol).click(); //locating formcontrol and clicking on it\ncy.get(_locator.locators.numbercontrol).click();\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.labeltextt).should('be.visible').clear().type('enter your lane no'); //label\ncy.get(_locator.locators.dropdown).select('Right');\ncy.get(_locator.locators.fieldsize).select('Large'); //fieldsize\ncy.get(_locator.locators.reqdfield).click(); // making reqd field\ncy.get(_locator.locators.reqdfield).click(); //reverting back ti not reqd field\ncy.get(_locator.locators.placeholder).should('be.visible').clear().type('lane no');\ncy.get(_locator.locators.canvas).should('be.visible'); //visibilty of control",
+              "err": {},
+              "uuid": "684d5307-6966-44fe-8e62-d7b50be3b821",
+              "parentUUID": "2eda5a62-ae93-4bca-8e5c-e42f3f1657e8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "684d5307-6966-44fe-8e62-d7b50be3b821"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31653,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ccd69ee8-655d-41b4-baaf-97eb147000cd",
+      "title": "",
+      "fullFile": "cypress/integration/formcontrol-textarea.js",
+      "file": "cypress/integration/formcontrol-textarea.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3d40dab6-9c9e-476c-8de7-5d17e92bd981",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "text",
+              "fullTitle": "Test text",
+              "timedOut": null,
+              "duration": 31500,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.formcontrol).click(); //locating formcontrol and clicking on it\ncy.get(_locator.locators.textarea).click();\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.labeltextt).should('be.visible').clear().type('anycomments'); //label\ncy.get(_locator.locators.dropdown).select('Right');\ncy.get(_locator.locators.fieldsize).select('Large'); //fieldsize\ncy.get(_locator.locators.reqdfield).click(); // making reqd field\ncy.get(_locator.locators.reqdfield).click(); //reverting back ti not reqd field\ncy.get(_locator.locators.placeholder).should('be.visible').clear().type('writedownsuggestions');\ncy.get(_locator.locators.canvas).should('be.visible'); //visibilty of control",
+              "err": {},
+              "uuid": "dab77fdb-e777-48b8-8029-7b39e788a6a7",
+              "parentUUID": "3d40dab6-9c9e-476c-8de7-5d17e92bd981",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dab77fdb-e777-48b8-8029-7b39e788a6a7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31500,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "689c3e89-04a2-4b21-af83-d382fb8800c2",
+      "title": "",
+      "fullFile": "cypress/integration/FormControls_text12109.js",
+      "file": "cypress/integration/FormControls_text12109.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81d14334-5cea-4605-904d-40da50f77d88",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "text",
+              "fullTitle": "Test text",
+              "timedOut": null,
+              "duration": 30962,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.formcontrol).click(); //locating formcontrol and clicking on it\ncy.get(_locator.locators.textbox).click();\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.labeltextt).should('be.visible').clear().type('colour'); //label\ncy.get(_locator.locators.dropdown).select('Right');\ncy.get(_locator.locators.fieldsize).select('Large'); //fieldsize\ncy.get(_locator.locators.reqdfield).click(); // making reqd field\ncy.get(_locator.locators.reqdfield).click(); //reverting back ti not reqd field\ncy.get(_locator.locators.placeholder).should('be.visible').clear().type('yourchoicecolor');\ncy.get(_locator.locators.canvas).should('be.visible'); //visibilty of control",
+              "err": {},
+              "uuid": "10cd102a-6c73-4edb-bfab-2d53da4487c8",
+              "parentUUID": "81d14334-5cea-4605-904d-40da50f77d88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10cd102a-6c73-4edb-bfab-2d53da4487c8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 30962,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4c6e0791-33d9-46f3-9461-6d0be5ed97ec",
+      "title": "",
+      "fullFile": "cypress/integration/forrmcontrol_checkbox.js",
+      "file": "cypress/integration/forrmcontrol_checkbox.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1f9a7d18-68e2-4e3e-83bf-d44e416b48ee",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "text",
+              "fullTitle": "Test text",
+              "timedOut": null,
+              "duration": 55087,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.formcontrol).click(); //locating formcontrol and clicking on it\ncy.get(_locator.locators.checkbox).click();\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.labeltextt).should('be.visible').clear().type('education'); //label\ncy.get(_locator.locators.chkbox0p1).clear().type('12th');\ncy.get(_locator.locators.chkbox0p2).clear().type('masters');\ncy.get(_locator.locators.chkbox0p3).clear().type('phd');\ncy.get(_locator.locators.chkextra).click(); //add extra options\ncy.get(_locator.locators.dislayother).click(); //display other options\n//cy.get(locators.randomize).click()//randomize choices\n//cy.get(locators.formcompletion).click()//form completion\ncy.get(_locator.locators.savenclose).click(); //save n close\ncy.wait(6000);\ncy.get(_locator.locators.topmost_form).click();\ncy.get('.mat-primary > .mat-button-wrapper').click();\ncy.wait(8000);\ncy.get(_locator.locators.topmost_form + '> a').should('have.attr', 'href').then(href => {\n  cy.visit(href);\n});\ncy.get('#mat-checkbox-5 > .mat-checkbox-layout > .mat-checkbox-inner-container').click(); //function to extract URL from the Topmost Form in Form Manager in order to open it in the same FRAME\ncy.wait(5000);\ncy.get('.col-md-12 > .btn').click();",
+              "err": {},
+              "uuid": "6054a418-9708-4611-a647-1ce54ebcaf73",
+              "parentUUID": "1f9a7d18-68e2-4e3e-83bf-d44e416b48ee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6054a418-9708-4611-a647-1ce54ebcaf73"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 55087,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ca5b94ea-5ecc-4880-8460-1e1b2cea0058",
+      "title": "",
+      "fullFile": "cypress/integration/Login_RightUserName_RightPassword.js",
+      "file": "cypress/integration/Login_RightUserName_RightPassword.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "QformsLogin",
+          "fullTitle": "QformsLogin",
+          "timedOut": null,
+          "duration": 12316,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\Login_RightUserName_RightPassword.js\\\\QformsLogin.png\"\n      }\n    ]\n  ]\n}",
+          "code": "call.login(); //logging q forms by calling log in function which contains its URL and credentials        \ncy.url().should('include', _link.links.exdashboardlink);\ncy.log(\"you have entered qforms log in page\");\ncy.url().should('eq', _link.links.exdashboardlink); //asserting dashboard url once we logged in \ncy.screenshot();",
+          "err": {},
+          "uuid": "bbe80e3d-6996-4766-98c5-9f3718a8659d",
+          "parentUUID": "ca5b94ea-5ecc-4880-8460-1e1b2cea0058",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "bbe80e3d-6996-4766-98c5-9f3718a8659d"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 12316,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3cf1d580-5a2f-4eea-9b12-cd2d9f35ee97",
+      "title": "",
+      "fullFile": "cypress/integration/Login_RightUserName_WrongPassword.js",
+      "file": "cypress/integration/Login_RightUserName_WrongPassword.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "invalidPassword",
+          "fullTitle": "invalidPassword",
+          "timedOut": null,
+          "duration": 10957,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\Login_RightUserName_WrongPassword.js\\\\invalidPassword.png\"\n      }\n    ]\n  ]\n}",
+          "code": "//typing invalid password\ncall.navigate(url);\ncall.validEmailAddress();\nlet result1 = \"result\";\nlet rpassword = call.generateString(8); //calling function in which we are randomly generating password\ncy.get(_locator.locators.password).type(rpassword);\ncall.onSubmit();\ncy.url().should('include', exlink);\ncall.errormessage(); //capturing error message which we get once we try to log in using invalid password/email\ncy.log(\"log in failed\"); //message\ncy.screenshot();",
+          "err": {},
+          "uuid": "a4da1b90-5a99-461c-bb49-be01f65b8875",
+          "parentUUID": "3cf1d580-5a2f-4eea-9b12-cd2d9f35ee97",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "a4da1b90-5a99-461c-bb49-be01f65b8875"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 10957,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c407b3be-c0f3-4b77-a9c5-80174d5c1ad0",
+      "title": "",
+      "fullFile": "cypress/integration/Login_WrongUserName_RightPassword.js",
+      "file": "cypress/integration/Login_WrongUserName_RightPassword.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "InvaLidEmail",
+          "fullTitle": "InvaLidEmail",
+          "timedOut": null,
+          "duration": 11237,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\Login_WrongUserName_RightPassword.js\\\\InvaLidEmail.png\"\n      }\n    ]\n  ]\n}",
+          "code": "//randomly generated email is given thus incorrect email id\ncall.navigate(url); //navigating q forms URL\ncall.remailAddress(); //calling function which generates random email address \ncall.password(); //correct password\ncall.onSubmit();\ncy.url().should('include', exlink); //asserting url as it will still contain url where we enter credentials \ncall.errormessage(); //capturing error message which we get once we try to log in using invalid password/email\ncy.log(\"log in failed\"); //we are giving message that our test case has passed as our log in is failed\ncy.screenshot();",
+          "err": {},
+          "uuid": "c5bbf742-425d-4c26-ab12-fcc7af2dc754",
+          "parentUUID": "c407b3be-c0f3-4b77-a9c5-80174d5c1ad0",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "c5bbf742-425d-4c26-ab12-fcc7af2dc754"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 11237,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ff4875d6-d1b3-4acd-844b-57fbf8fb3ce5",
+      "title": "",
+      "fullFile": "cypress/integration/Login_WrongUserName_WrongPassword.js",
+      "file": "cypress/integration/Login_WrongUserName_WrongPassword.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "InvaLidEmail",
+          "fullTitle": "InvaLidEmail",
+          "timedOut": null,
+          "duration": 12778,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\Login_WrongUserName_WrongPassword.js\\\\InvaLidEmail.png\"\n      }\n    ]\n  ]\n}",
+          "code": "//randomly generated email is given thus incorrect email id\ncall.navigate(url); //navigating q forms URL\ncall.remailAddress(); //calling function which generates random email address \nlet rpassword = call.generateString(8); //calling function in which we are randomly generating password\ncy.get(_locator.locators.password).type(rpassword);\ncall.onSubmit();\ncy.url().should('include', exlink); //asserting url as it will still contain url where we enter credentials \ncall.errormessage(); //capturing error message which we get once we try to log in using invalid password/email\ncy.log(\"log in failed\"); //we are giving message that our test case has passed as our log in is failed\ncy.screenshot();",
+          "err": {},
+          "uuid": "67361172-7392-40d3-9780-2283b7f6b9ac",
+          "parentUUID": "ff4875d6-d1b3-4acd-844b-57fbf8fb3ce5",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "67361172-7392-40d3-9780-2283b7f6b9ac"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 12778,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "207a7c8d-f059-4997-9a94-a3f5c0dd30d1",
+      "title": "",
+      "fullFile": "cypress/integration/pricetable12108.js",
+      "file": "cypress/integration/pricetable12108.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "78a84a0f-215a-4967-ac0b-01c0f6023171",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "features",
+              "fullTitle": "Test features",
+              "timedOut": null,
+              "duration": 70373,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.feature).drag(_locator.locators.canvas); //list items will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.wait(6000);\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('features');\ncy.get(_locator.locators.heading).should('be.visible'); //heading should be visible\ncy.get(_locator.locators.columntitleleft).click().clear().type('hi');\ncy.wait(6000);\ncy.get(_locator.locators.columntitleleft).type('hi');\ncy.get(_locator.locators.descriptionleft).type('hii');\ncy.get(_locator.locators.buttonlefttext).type('me');\ncy.get(_locator.locators.lefturl).type(_userData.userdata.url4test);\ncy.wait(4000);\ncy.get(_locator.locators.canvasfeatures).should('have.text', _userData.userdata.junkdata); //asserting canvas area whether chnages are reflected\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "de9d09f2-0d7c-45ae-9cb3-b4ff16d4ce5f",
+              "parentUUID": "78a84a0f-215a-4967-ac0b-01c0f6023171",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de9d09f2-0d7c-45ae-9cb3-b4ff16d4ce5f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 70373,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bbcc3645-d3f8-487f-ac0f-9a2002a4a29b",
+      "title": "",
+      "fullFile": "cypress/integration/Typography - Header_12099.js",
+      "file": "cypress/integration/Typography - Header_12099.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5d187c7e-19dd-4eef-83f3-468dc9b61232",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "header",
+              "fullTitle": "Test header",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform();\ncy.get(_locator.locators.heading).drag(_locator.locators.dragyouroption); //heading will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('headingform'); //typing in field name\ncy.wait(4000);\ncy.get(_locator.locators.label_header).should('be.visible').clear().type('my first heading label'); //typing in field name\ncy.wait(4000);\ncy.get(_locator.locators.toggle_hide).click(); //check whether subtitle is hidden\ncy.log('subtitle is hidden');\ncy.get(_locator.locators.dropdown_left_rght_top).select('Right');\ncy.get(_locator.locators.dropdown_left_rght_top).select('Left');\ncy.get(_locator.locators.dropdown_left_rght_top).select('Center');\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview\n// // cy.get('#mat-button-toggle-19-button > .mat-button-toggle-label-content').click() \n// cy.get('[style=\"margin-top: -35px; border: 1px solid #b9afaf; padding-top: 5px; min-height: 85vh; padding-bottom: 5px;\"] > .ng-star-inserted').should('be.visible').click()\n// //^tablet view\n// cy.log(\"tablet view is enabled\")\n// cy.get('#mat-slide-toggle-3').click()//back to form  builder\n// cy.get('.txtarea-heading').should('be.visible').clear().type('hi') //will write hi in header\n// cy.get('div.edit-mode').should('be.visible').clear().type('here check it') //will edit sub title\n// cy.get(':nth-child(4) > .mat-primary').click()//will save it through icon from right\n// cy.get('.toast-message').should('be.visible')//save message\n// cy.log(\"you saved form\")\n// cy.get(':nth-child(4) > .mat-warn > .mat-button-wrapper > .mat-icon').click()//icon save n close from right\n// cy.get('.mat-dialog-content > div').should('be.visible')// are you sure dialog box assert\n// cy.get('[fxlayout=\"row\"] > .mat-primary').click() // clicking confirm pop up to close\n// cy.get(':nth-child(1) > .cdk-column-action > .mat-menu-trigger').click()// actions...",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `:nth-child(2) > .column-heading`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `:nth-child(2) > .column-heading`, but never found it.\n    at Context.eval (https://test.qforms.co/__cypress/tests?p=cypress\\integration\\Typography%2520-%2520Header_12099.js:463:8)",
+                "diff": null
+              },
+              "uuid": "1c0adb0f-7ba8-4c2d-998b-c211f2437916",
+              "parentUUID": "5d187c7e-19dd-4eef-83f3-468dc9b61232",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1c0adb0f-7ba8-4c2d-998b-c211f2437916"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "86fbf3a5-8e7f-4b88-97fe-76039524392e",
+      "title": "",
+      "fullFile": "cypress/integration/Typography - Image Text12103.js",
+      "file": "cypress/integration/Typography - Image Text12103.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "241884ac-3ea7-4dce-a08b-f0465b994d8f",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "image text",
+              "fullTitle": "Test image text",
+              "timedOut": null,
+              "duration": 50226,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform();\ncy.get(_locator.locators.imagetext).drag(_locator.locators.canvas); //paragraph will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('imgtext');\ncy.get(_locator.locators.imagelocation).clear().type(_label.labels.image1url); //typing in image url\ncy.get(_locator.locators.imagealign).select('Right'); //moving image right\ncy.wait(4000);\ncy.get(_locator.locators.toggle_hide).click(); //autoscale\ncy.get(_locator.locators.imgvisibleright).should('be.visible'); //checking image on canvas\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "63a045b1-4a85-4e91-b391-e0472bcd313d",
+              "parentUUID": "241884ac-3ea7-4dce-a08b-f0465b994d8f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63a045b1-4a85-4e91-b391-e0472bcd313d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 50226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e9fde922-bd9b-4648-9920-ca0f5914cb9b",
+      "title": "",
+      "fullFile": "cypress/integration/Typography - Jumbotron_12105.js",
+      "file": "cypress/integration/Typography - Jumbotron_12105.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27b78550-d2fd-4e3b-9c42-60cf71f32f23",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "jumbotron",
+              "fullTitle": "Test jumbotron",
+              "timedOut": null,
+              "duration": 59581,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.jumboton).drag(_locator.locators.canvas); //list items will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('jumbotron');\ncy.get(_locator.locators.jumbtitle).clear().type('testing'); //writing title in jumbotron\ncy.get(_locator.locators.jumbdescription).clear().type('testing the butttton below'); //writing description in jumbotron\ncy.get(_locator.locators.buttontext).clear().type('clicknow'); //button text \ncy.get(_locator.locators.buttonurl).clear().type('https://www.facebook.com');\ncy.get(_locator.locators.clickbutton).should('be.visible');\ncy.wait(4000);\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "9eb7c519-6bb6-4a34-9346-985eb12695f7",
+              "parentUUID": "27b78550-d2fd-4e3b-9c42-60cf71f32f23",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9eb7c519-6bb6-4a34-9346-985eb12695f7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 59581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4becc926-b4f8-465c-81ee-7156ac3ac292",
+      "title": "",
+      "fullFile": "cypress/integration/Typography - ListItems_12104.js",
+      "file": "cypress/integration/Typography - ListItems_12104.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5fbe13e6-2a48-4ed0-a9a1-b792359ae87d",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "list items",
+              "fullTitle": "Test list items",
+              "timedOut": null,
+              "duration": 53866,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.listitems).drag(_locator.locators.canvas); //list items will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('items');\ncy.get(_locator.locators.listitemtext).clear().type('apple').type('{enter}').type('mango').type('{enter}').type('orange');\ncy.get(_locator.locators.listtype).select('Unordered'); //changing list order\ncy.get(_locator.locators.fontsize).select('Large'); //changing font size to large\ncy.wait(4000);\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "9ea9971c-c664-4434-a98e-0dc4603b5c6a",
+              "parentUUID": "5fbe13e6-2a48-4ed0-a9a1-b792359ae87d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ea9971c-c664-4434-a98e-0dc4603b5c6a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 53866,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dbb4f8fb-c9c3-4ac3-aa78-f44ad4e24bd4",
+      "title": "",
+      "fullFile": "cypress/integration/Typography-2Columntext_12102.js",
+      "file": "cypress/integration/Typography-2Columntext_12102.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1510858f-40ae-479d-86d2-ec9e32befa3a",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "2Columntext",
+              "fullTitle": "Test 2Columntext",
+              "timedOut": null,
+              "duration": 53834,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform(); // plus icon working\ncy.get(_locator.locators.twocolumntext).drag(_locator.locators.canvas); //paragraph will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('twocolumntest');\ncy.get(_locator.locators.image1locator).clear().type(_label.labels.image1url); //typing in image url\ncy.get(_locator.locators.image1columnurl).clear().type(_label.labels.Columntextlabel);\ncy.get(_locator.locators.aligncolumnlocator).select('Top');\ncy.get(_locator.locators.image2locator).clear().type(_label.labels.image1url); //typing in column text\ncy.get(_locator.locators.image2columnurl).clear().type(_label.labels.Columntextlabel);\ncy.wait(4000);\ncy.get(_locator.locators.alignment).select('Top');\ncy.get(_locator.locators.toggle_hide).click(); //autoscale\ncy.get(_locator.locators.img).should('be.visible'); //checking image on canvas\ncy.get(_locator.locators.img2).should('be.visible');\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "02efe084-eb0d-4d7b-8fc7-7b17d01f89b9",
+              "parentUUID": "1510858f-40ae-479d-86d2-ec9e32befa3a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "02efe084-eb0d-4d7b-8fc7-7b17d01f89b9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 53834,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b2d55036-05dc-49c3-a922-a4ae1858962c",
+      "title": "",
+      "fullFile": "cypress/integration/Typography-features.js",
+      "file": "cypress/integration/Typography-features.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bfdb396c-da30-4c68-8d25-014394b8f722",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "features",
+              "fullTitle": "Test features",
+              "timedOut": null,
+              "duration": 73272,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.feature).drag(_locator.locators.canvas); //list items will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.wait(6000);\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('features');\ncy.get(_locator.locators.heading).should('be.visible'); //heading should be visible\ncy.get(_locator.locators.columntitleleft).click().clear().type('hi');\ncy.wait(6000);\ncy.get(_locator.locators.columntitleleft).type('hi');\ncy.get(_locator.locators.descriptionleft).type('hii');\ncy.get(_locator.locators.buttonlefttext).type('me');\ncy.get(_locator.locators.lefturl).type(_userData.userdata.url4test);\ncy.wait(4000);\ncy.get(_locator.locators.canvasfeatures).should('have.text', _userData.userdata.junkdata); //asserting canvas area whether chnages are reflected\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "029a3425-5b15-4912-be7e-e900f036cab5",
+              "parentUUID": "bfdb396c-da30-4c68-8d25-014394b8f722",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "029a3425-5b15-4912-be7e-e900f036cab5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 73272,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8dda1d08-fd84-4952-8003-6d0b8705f25a",
+      "title": "",
+      "fullFile": "cypress/integration/Typography-Paragraph_12100.js",
+      "file": "cypress/integration/Typography-Paragraph_12100.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "884c94b0-5d3c-4464-963e-ed5ecc3a3148",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "paragraph",
+              "fullTitle": "Test paragraph",
+              "timedOut": null,
+              "duration": 49092,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform(); // plus icon working\ncy.get(_locator.locators.paragraph).drag(_locator.locators.canvas); //paragraph will be dragged on screen\ncy.get(_locator.locators.paragraph).click(); //adding paragraph by click\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('paragraphform');\ncy.get(_locator.locators.label_text).should('be.visible').clear().type('my first paragrph label'); //typing in field name\ncy.wait(4000);\ncy.get(_locator.locators.dropdown_left_rght_top_para).select('Right');\ncy.get(_locator.locators.dropdown_left_rght_top_para).select('Left');\ncy.get(_locator.locators.dropdown_left_rght_top_para).select('Center');\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click(); //tablet\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click(); //[phone]\ncy.wait(6000);\ncy.contains('Potrait').click();\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {},
+              "uuid": "0c237d04-219c-4d2a-a174-77134f57b9d7",
+              "parentUUID": "884c94b0-5d3c-4464-963e-ed5ecc3a3148",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c237d04-219c-4d2a-a174-77134f57b9d7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 49092,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9bc5cf6c-6317-4f63-b988-f7817b9e5ecd",
+      "title": "",
+      "fullFile": "cypress/integration/apitest.js",
+      "file": "cypress/integration/apitest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "testApI",
+          "fullTitle": "testApI",
+          "timedOut": null,
+          "duration": 4952,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.request('https://m.stripe.com/6').then(response => {\n  expect(response.status).equal(200);\n});",
+          "err": {},
+          "uuid": "ff46f701-7589-4200-836a-70acd5d74977",
+          "parentUUID": "9bc5cf6c-6317-4f63-b988-f7817b9e5ecd",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "ff46f701-7589-4200-836a-70acd5d74977"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 4952,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

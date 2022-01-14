@@ -1,20 +1,13 @@
 {
     "defaultCommandTimeout": 10000,
-    "reporter": "cypress-mochawesome-reporter",
+    "reporter": "cypress-multi-reporters",
     "reporterOptions": {
-
-      "reportDir": "cypress/reports",
-
-      "reportFilename": "Qforms_report",
-
-      "overwrite": true,
-
-      "html": true,
-
-      "json": true,
-      "video":false,
-
-      "charts": false
-
-    }
-}
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "html": false,
+            "json": true
+        }
+    }}

@@ -7,7 +7,7 @@ export class text{
     
     
     navigate(url){
-        cy.visit(url)
+        cy.visit(url)//argument url
        // cy.get(':nth-child(7) > .mat-button-wrapper').click();
         cy.wait(3000);
     }
@@ -21,7 +21,7 @@ export class text{
     login(){
 
         let url1='https://test.qforms.co'
-        this.navigate(url1)
+        this.navigate(url1)//
         this.validEmailAddress()
         this.password()
         this.onSubmit()

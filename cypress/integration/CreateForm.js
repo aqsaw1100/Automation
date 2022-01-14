@@ -5,8 +5,8 @@ import { locators } from "d:/cypressQformautomation/cypress/Pages/locator"
 import { data, text} from  "d:/cypressQformautomation/cypress/Pages/function"
 import { userdata } from "d:/cypressQformautomation/cypress/Pages/userData"
 import { links } from "d:/cypressQformautomation/cypress/Pages/link"
-import { result } from "lodash"
-import {labels} from"d:/cypressQformautomation/cypress/Pages/label"
+
+
 
 const call =new text()
 let url=links.link1

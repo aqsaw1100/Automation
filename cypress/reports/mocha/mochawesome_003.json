@@ -1,0 +1,88 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-11T15:25:53.042Z",
+    "end": "2022-01-11T15:26:09.148Z",
+    "duration": 16106,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a6db311d-2d27-4751-ab1f-c361dfd71eae",
+      "title": "",
+      "fullFile": "cypress/integration/ForgetPassword_RegisteredEmail.js",
+      "file": "cypress/integration/ForgetPassword_RegisteredEmail.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "forgetPassword",
+          "fullTitle": "forgetPassword",
+          "timedOut": null,
+          "duration": 13448,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\ForgetPassword_RegisteredEmail.js\\\\forgetPassword.png\"\n      }\n    ]\n  ]\n}",
+          "code": "call.navigate(url);\ncy.get(_locator.locators.forgetlink).click(); //forgt link click\ncall.forgetpassword();\ncy.get(_locator.locators.sendemail).click(); //click on send email\ncy.get(_locator.locators.successtoast).should('have.text', \" Success \"); //once email is send check message pop success is on screen\ncy.screenshot();\ncy.contains('Please check your inbox'); //checking label",
+          "err": {},
+          "uuid": "b0215e48-3c33-4ccd-ad4b-f088fb4fb22d",
+          "parentUUID": "a6db311d-2d27-4751-ab1f-c361dfd71eae",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "b0215e48-3c33-4ccd-ad4b-f088fb4fb22d"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 13448,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
