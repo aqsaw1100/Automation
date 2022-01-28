@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-27T09:04:07.397Z",
+    "end": "2022-01-27T09:05:07.922Z",
+    "duration": 60525,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "29c60731-ac6d-4b99-b837-353a4de27c4e",
+      "title": "",
+      "fullFile": "cypress/integration/DashboardLabelCheck_11958.js",
+      "file": "cypress/integration/DashboardLabelCheck_11958.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6379a55f-3153-4024-b224-9dad8d7447e5",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "billingninvoice",
+              "fullTitle": "Test billingninvoice",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.get(_locator.locators.billing).click();\ncy.get(_locator.locators.clientid).invoke('text').then(textOfElement => {\n  expect(textOfElement.trim()).to.equal(\"CLIENT ID\"); //checking label client id\n  cy.screenshot();\n  cy.contains('Invoice Number');\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://localhost:64568/__cypress/runner/cypress_runner.js:157134:72)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:158177:16\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:64568/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:64568/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:64568/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:64568/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:64568/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:64568/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at text.navigate (http://localhost:64568/__cypress/tests?p=cypress\\integration\\DashboardLabelCheck_11958.js:17524:8)\n    at text.login (http://localhost:64568/__cypress/tests?p=cypress\\integration\\DashboardLabelCheck_11958.js:17540:10)\n    at Context.eval (http://localhost:64568/__cypress/tests?p=cypress\\integration\\DashboardLabelCheck_11958.js:264:10)",
+                "diff": null
+              },
+              "uuid": "c17fc43d-e57d-49f4-944b-e05a57160e4a",
+              "parentUUID": "6379a55f-3153-4024-b224-9dad8d7447e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c17fc43d-e57d-49f4-944b-e05a57160e4a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

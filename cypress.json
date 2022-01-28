@@ -1,5 +1,12 @@
 {
-    "defaultCommandTimeout": 10000,
+    
+    "chromeWebSecurity": false,
+
+    "defaultCommandTimeout": 20000,
+
+    "screenshotOnRunFailure": true,
+
+   
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
@@ -9,5 +16,8 @@
             "overwrite": false,
             "html": false,
             "json": true
-        }
-    }}
+            
+        } 
+    },
+"video":false
+}

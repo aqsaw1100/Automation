@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-27T09:24:06.232Z",
+    "end": "2022-01-27T09:25:06.591Z",
+    "duration": 60359,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "377b1359-6ea9-4f05-bdfe-919b09f6b38a",
+      "title": "",
+      "fullFile": "cypress/integration/Typography-Paragraph_12100.js",
+      "file": "cypress/integration/Typography-Paragraph_12100.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d232c88-12b1-4880-8d99-62249be39772",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "paragraph",
+              "fullTitle": "Test paragraph",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform(); // plus icon working\ncy.get(_locator.locators.paragraph).drag(_locator.locators.canvas); //paragraph will be dragged on screen\ncy.get(_locator.locators.paragraph).click(); //adding paragraph by click\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('paragraphform');\ncy.get(_locator.locators.label_text).should('be.visible').clear().type('my first paragrph label'); //typing in field name\ncy.wait(4000);\ncy.get(_locator.locators.dropdown_left_rght_top_para).select('Right');\ncy.get(_locator.locators.dropdown_left_rght_top_para).select('Left');\ncy.get(_locator.locators.dropdown_left_rght_top_para).select('Center');\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click(); //tablet\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click(); //[phone]\ncy.wait(6000);\ncy.contains('Potrait').click();\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://localhost:64568/__cypress/runner/cypress_runner.js:157134:72)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:158177:16\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:64568/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:64568/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:64568/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:64568/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:64568/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:64568/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at text.navigate (http://localhost:64568/__cypress/tests?p=cypress\\integration\\Typography-Paragraph_12100.js:183:8)\n    at text.login (http://localhost:64568/__cypress/tests?p=cypress\\integration\\Typography-Paragraph_12100.js:199:10)\n    at Context.eval (http://localhost:64568/__cypress/tests?p=cypress\\integration\\Typography-Paragraph_12100.js:116:10)",
+                "diff": null
+              },
+              "uuid": "6dca4303-bafa-41ae-bb30-ed1a000ad821",
+              "parentUUID": "9d232c88-12b1-4880-8d99-62249be39772",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6dca4303-bafa-41ae-bb30-ed1a000ad821"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

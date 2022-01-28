@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-27T09:03:03.060Z",
+    "end": "2022-01-27T09:04:03.491Z",
+    "duration": 60431,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e0ab4f2-9d32-4766-9ade-12d183d30f79",
+      "title": "",
+      "fullFile": "cypress/integration/CreateForm.js",
+      "file": "cypress/integration/CreateForm.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1679f4ee-8bef-43ea-80e6-b3f500bdcd8a",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create form",
+              "fullTitle": "Test create form",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.get(_locator.locators.createform).click(); //locating create form on page and clicking on it\ncy.get(_locator.locators.textcreateform).should('have.text', \"Create a Form\");\ncy.get(_locator.locators.text2createform).should('have.text', \"Create an amazing form to collect data easily.\"); //look for label                         \ncy.get(_locator.locators.formbuilder).should('be.visible').click(); //on select template look for form builder locator\ncy.get(_locator.locators.dragyouroption).should('be.visible'); //label drag your first element should be visible\ncy.get(_locator.locators.plusicon).click(); //click on plus icon\ncy.contains('Form Elements'); //check label Form element is there\ncy.get(_locator.locators.control).invoke('text').then(labelcontrol => {\n  //check whether label control  is there or not    \n  expect(labelcontrol.trim()).to.equal(\"Controls\");\n});\ncy.get(_locator.locators.typography).invoke('text').then(labeltypography => {\n  //check for label typography is there or not\n  expect(labeltypography.trim()).to.equal(\"Typography\");\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://localhost:64568/__cypress/runner/cypress_runner.js:157134:72)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:158177:16\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:64568/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:64568/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:64568/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:64568/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:64568/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:64568/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at text.navigate (http://localhost:64568/__cypress/tests?p=cypress\\integration\\CreateForm.js:182:8)\n    at text.login (http://localhost:64568/__cypress/tests?p=cypress\\integration\\CreateForm.js:198:10)\n    at Context.eval (http://localhost:64568/__cypress/tests?p=cypress\\integration\\CreateForm.js:121:10)",
+                "diff": null
+              },
+              "uuid": "00a24da8-9740-482b-8c56-c99e5b909f68",
+              "parentUUID": "1679f4ee-8bef-43ea-80e6-b3f500bdcd8a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "00a24da8-9740-482b-8c56-c99e5b909f68"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

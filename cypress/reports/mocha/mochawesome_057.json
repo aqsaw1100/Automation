@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-27T09:18:52.563Z",
+    "end": "2022-01-27T09:19:52.906Z",
+    "duration": 60343,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d52752b6-b385-49b3-8a5c-18a333e9424a",
+      "title": "",
+      "fullFile": "cypress/integration/Typography - Image Text12103.js",
+      "file": "cypress/integration/Typography - Image Text12103.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e9dc452-f8dc-4221-a321-06e1e7a8ef23",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "image text",
+              "fullTitle": "Test image text",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(3000);\ncy.createform();\ncy.get(_locator.locators.imagetext).drag(_locator.locators.canvas); //paragraph will be dragged on screen\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.fieldname).should('be.visible').clear().type('imgtext');\ncy.get(_locator.locators.imagelocation).clear().type(_label.labels.image1url); //typing in image url\ncy.get(_locator.locators.imagealign).select('Right'); //moving image right\ncy.wait(4000);\ncy.get(_locator.locators.toggle_hide).click(); //autoscale\ncy.get(_locator.locators.imgvisibleright).should('be.visible'); //checking image on canvas\ncy.get(_locator.locators.form_preview).click(); //preview \ncy.wait(6000);\ncy.get(_locator.locators.tabletform).should('be.visible').click();\ncy.wait(6000);\ncy.get(_locator.locators.mobileform).should('be.visible').click();\ncy.wait(6000);\ncy.get('.smartphone').should('be.visible'); //using smart phone in preview",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://localhost:64568/__cypress/runner/cypress_runner.js:157134:72)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:158177:16\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:64568/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:64568/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:64568/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:64568/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:64568/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:64568/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at text.navigate (http://localhost:64568/__cypress/tests?p=cypress\\integration\\Typography%2520-%2520Image%2520Text12103.js:210:8)\n    at text.login (http://localhost:64568/__cypress/tests?p=cypress\\integration\\Typography%2520-%2520Image%2520Text12103.js:226:10)\n    at Context.eval (http://localhost:64568/__cypress/tests?p=cypress\\integration\\Typography%2520-%2520Image%2520Text12103.js:146:10)",
+                "diff": null
+              },
+              "uuid": "4461a1bf-62ff-44cd-9c4d-47c6617dea62",
+              "parentUUID": "8e9dc452-f8dc-4221-a321-06e1e7a8ef23",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4461a1bf-62ff-44cd-9c4d-47c6617dea62"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

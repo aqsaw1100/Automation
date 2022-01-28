@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-21T14:15:27.764Z",
+    "end": "2022-01-21T14:16:45.204Z",
+    "duration": 77440,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e3d3584-f11e-4282-8d78-47156c7ccfe6",
+      "title": "",
+      "fullFile": "cypress/integration/apitest.js",
+      "file": "cypress/integration/apitest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "testApI",
+          "fullTitle": "testApI",
+          "timedOut": null,
+          "duration": 77217,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.request('https://m.stripe.com/6').then(response => {\n  expect(response.status).equal(200);\n});",
+          "err": {
+            "message": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.",
+            "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at http://localhost:37165/__cypress/runner/cypress_runner.js:159546:81\n    at tryCatcher (http://localhost:37165/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:37165/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (http://localhost:37165/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:37165/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:37165/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:37165/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:37165/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:37165/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:37165/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:37165/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:37165/__cypress/runner/cypress_runner.js:7782:14)",
+            "diff": null
+          },
+          "uuid": "39f6d535-b508-4007-87bf-67b3effd1cf2",
+          "parentUUID": "0e3d3584-f11e-4282-8d78-47156c7ccfe6",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "39f6d535-b508-4007-87bf-67b3effd1cf2"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 77217,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

@@ -5,7 +5,7 @@ services:
     image: "cyp-dock-mocha-report"
     command: "test"
     volumes:
-      - ./cypress/videos:/cypress-docker/cypress/videos
+      
       - ./cypress/reports:/cypress-docker/cypress/reports
 
   # this container will run Cypress test using Chrome browser
@@ -13,7 +13,7 @@ services:
     image: "cyp-dock-mocha-report"
     command: "chrome:test"
     volumes:
-      - ./cypress/videos:/cypress-docker/cypress/videos
+      
       - ./cypress/reports:/cypress-docker/cypress/reports
 
   # this container will run Cypress test using Firefox browser
@@ -25,5 +25,5 @@ services:
     environment:
       - DEBUG=cypress:server:browsers:firefox-util,cypress:server:util:process_profiler
     volumes:
-      - ./cypress/videos:/cypress-docker/cypress/videos
+     
       - ./cypress/reports:/cypress-docker/cypress/reports

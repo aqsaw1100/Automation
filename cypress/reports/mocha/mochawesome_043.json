@@ -1,0 +1,92 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-27T09:05:11.306Z",
+    "end": "2022-01-27T09:06:11.758Z",
+    "duration": 60452,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3f4757ce-01b2-4c90-93e7-a038453eea7a",
+      "title": "",
+      "fullFile": "cypress/integration/ForgetPassword_RegisteredEmail.js",
+      "file": "cypress/integration/ForgetPassword_RegisteredEmail.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "forgetPassword",
+          "fullTitle": "forgetPassword",
+          "timedOut": null,
+          "duration": 60370,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\ForgetPassword_RegisteredEmail.js\\\\forgetPassword (failed).png\"\n      }\n    ]\n  ]\n}",
+          "code": "call.navigate(url);\ncy.get(_locator.locators.forgetlink).click(); //forgt link click\ncall.forgetpassword();\ncy.get(_locator.locators.sendemail).click(); //click on send email\ncy.get(_locator.locators.successtoast).should('have.text', \" Success \"); //once email is send check message pop success is on screen\ncy.screenshot();\ncy.contains('Please check your inbox'); //checking label",
+          "err": {
+            "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+            "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://localhost:64568/__cypress/runner/cypress_runner.js:157134:72)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:158177:16\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:64568/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:64568/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:64568/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:64568/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:64568/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:64568/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at text.navigate (http://localhost:64568/__cypress/tests?p=cypress\\integration\\ForgetPassword_RegisteredEmail.js:159:8)\n    at Context.eval (http://localhost:64568/__cypress/tests?p=cypress\\integration\\ForgetPassword_RegisteredEmail.js:111:8)",
+            "diff": null
+          },
+          "uuid": "79360e9c-1153-4adc-aa31-d47a41a9d5cc",
+          "parentUUID": "3f4757ce-01b2-4c90-93e7-a038453eea7a",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "79360e9c-1153-4adc-aa31-d47a41a9d5cc"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 60370,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

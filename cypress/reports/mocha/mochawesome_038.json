@@ -1,0 +1,88 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-27T08:34:36.564Z",
+    "end": "2022-01-27T08:34:47.441Z",
+    "duration": 10877,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5b1cc843-8b0e-4b01-a4ff-5ac296495687",
+      "title": "",
+      "fullFile": "cypress/integration/apitest.js",
+      "file": "cypress/integration/apitest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "testApI",
+          "fullTitle": "testApI",
+          "timedOut": null,
+          "duration": 10781,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.request('https://m.stripe.com/6').then(response => {\n  expect(response.status).equal(200);\n});",
+          "err": {},
+          "uuid": "9e140b6c-8bd1-4101-a7d9-46fe3020a4ee",
+          "parentUUID": "5b1cc843-8b0e-4b01-a4ff-5ac296495687",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "9e140b6c-8bd1-4101-a7d9-46fe3020a4ee"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 10781,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

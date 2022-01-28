@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-27T09:10:26.106Z",
+    "end": "2022-01-27T09:11:26.510Z",
+    "duration": 60404,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d290b02c-cd5c-45de-83ef-32cf571fcd9d",
+      "title": "",
+      "fullFile": "cypress/integration/forrmcontrol_checkbox.js",
+      "file": "cypress/integration/forrmcontrol_checkbox.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66250512-35b0-40b8-b34f-460030dd7130",
+          "title": "Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "text",
+              "fullTitle": "Test text",
+              "timedOut": null,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "call.login();\ncy.wait(6000);\ncy.createform();\ncy.wait(6000); //locating create form on page and clicking on it\ncy.get(_locator.locators.formcontrol).click(); //locating formcontrol and clicking on it\ncy.get(_locator.locators.checkbox).click();\ncy.get(_locator.locators.properties).click(); //click on properties\ncy.get(_locator.locators.labeltextt).should('be.visible').clear().type('education'); //label\ncy.get(_locator.locators.chkbox0p1).clear().type('12th');\ncy.get(_locator.locators.chkbox0p2).clear().type('masters');\ncy.get(_locator.locators.chkbox0p3).clear().type('phd');\ncy.get(_locator.locators.chkextra).click(); //add extra options\ncy.get(_locator.locators.dislayother).click(); //display other options\n//cy.get(locators.randomize).click()//randomize choices\n//cy.get(locators.formcompletion).click()//form completion\ncy.get(_locator.locators.savenclose).click(); //save n close\ncy.wait(6000);\ncy.get(_locator.locators.topmost_form).click();\ncy.get('.mat-primary > .mat-button-wrapper').click();\ncy.wait(8000);\ncy.get(_locator.locators.topmost_form + '> a').should('have.attr', 'href').then(href => {\n  cy.visit(href);\n});\ncy.get('#mat-checkbox-5 > .mat-checkbox-layout > .mat-checkbox-inner-container').click(); //function to extract URL from the Topmost Form in Form Manager in order to open it in the same FRAME\ncy.wait(5000);\ncy.get('.col-md-12 > .btn').click();",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (http://localhost:64568/__cypress/runner/cypress_runner.js:157134:72)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:158177:16\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at http://localhost:64568/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (http://localhost:64568/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (http://localhost:64568/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (http://localhost:64568/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (http://localhost:64568/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (http://localhost:64568/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (http://localhost:64568/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (http://localhost:64568/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (http://localhost:64568/__cypress/runner/cypress_runner.js:7782:14)\nFrom Your Spec Code:\n    at text.navigate (http://localhost:64568/__cypress/tests?p=cypress\\integration\\forrmcontrol_checkbox.js:191:8)\n    at text.login (http://localhost:64568/__cypress/tests?p=cypress\\integration\\forrmcontrol_checkbox.js:207:10)\n    at Context.eval (http://localhost:64568/__cypress/tests?p=cypress\\integration\\forrmcontrol_checkbox.js:118:10)",
+                "diff": null
+              },
+              "uuid": "9c034470-1b09-4510-95d1-5056f4f6eb1a",
+              "parentUUID": "66250512-35b0-40b8-b34f-460030dd7130",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9c034470-1b09-4510-95d1-5056f4f6eb1a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
